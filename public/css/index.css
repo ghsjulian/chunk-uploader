@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white: #ffffff;
+    --color: #03515e;
+    --text: #222627;
+    --error: #ba0000;
+    --success: #128603;
+    --container-shadow: 8px 10px 10px #6d6d6d, -8px -5px 25px #6d6d6d;
+}
+html {
+    font-size: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d0d6d7;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding: 20rem 0;
+}
+.container {
+    max-width: 400px;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h3,
+#msg,
+label,
+button {
+    width: 90%;
+    margin: 0.5rem;
+}
+.container .media-container {
+    position: relative;
+    display: none;
+}
+.media-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+    border-radius: 5px;
+    display: none;
+}
+.media-container video {
+    display: none;
+    border-radius: 5px;
+}
+.media-container audio {
+    display: none;
+}
+.media-container #close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--error);
+    color: var(--white);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 9000;
+}
+.container .error {
+    text-align: center;
+    background: var(--error);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 0.6rem;
+    margin: 0.7rem auto;
+    font-weight: 600;
+}
+.container .success {
+    text-align: center;
+    background: var(--success);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 0.6rem;
+    margin: 0.7rem auto;
+    font-weight: 600;
+}
+.container h3 {
+    color: var(--color);
+    font-weight: 700;
+    text-align: center;
+}
+.container label {
+    border: 0.1px solid var(--color);
+    color: var(--text);
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.container label span {
+    color: var(--text);
+    font-weight: 800;
+}
+.container label img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+.container label:hover {
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+.container button {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: var(--color);
+    color: #fff;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    margin: 0.7rem 0;
+    padding: 0.7rem 1rem;
+}
+.container a {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: var(--success);
+    color: #fff;
+    font-weight: 800;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0.7rem 0;
+    padding: 0.7rem 1rem;
+    width: 90%;
+}
+.container .cancel {
+    background: var(--error);
+    color: var(--white);
+}
+.container .file-info {
+    width: 90%;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.file-info li {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    overflow: hidden;
+}
+.file-info li span {
+    color: var(--text);
+    font-weight: 600;
+}
+.file-info li #val {
+    color: var(--color);
+    font-weight: 500;
+    max-width: 120px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

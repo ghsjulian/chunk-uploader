@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/index.css" />
+        <title>Chunk App Tutorial And Practice - By Ghs Julian</title>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Chunk File Uploader</h3>
+            <div class="media-container">
+                <span id="close">X</span>
+                <img src="m-1.jpg" />
+                <video
+                    id="video"
+                    src="http://localhost:3000/Video.Guru_20250727_175652061.mp4"
+                    width="300"
+                    height="300"
+                    controls=""
+                ></video>
+                <audio src="audio.mp3" autoplay="" controls="">
+                </audio>
+            </div>
+            <span id="msg"></span>
+            <label for="file">
+                <span>Select A File</span>
+                <img src="/icons/upload.png" alt="upload" />
+            </label>
+            <div id="file-info"></div>
+            <input
+                type="file"
+                hidden="true"
+                id="file"
+                multiple="true"
+                accept="/*"
+            />
+            <button class="upload">
+                <span id="progress"></span>
+                <span id="text">Upload Now</span>
+            </button>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>
