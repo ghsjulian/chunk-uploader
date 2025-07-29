@@ -12,7 +12,8 @@ const progress = uploadBtn.querySelector("#progress");
 const btnText = uploadBtn.querySelector("#text");
 var FILE = null;
 var isUploading = false;
-const api = "http://localhost:3000/api/v1/uploader/upload-single-file";
+//const api = "http://localhost:3000/api/v1/uploader/upload-single-file";
+const api = "https://chunk-uploader.onrender.com/api/v1/uploader/upload-single-file"
 
 const showMessage = (type, message) => {
     if (type) {

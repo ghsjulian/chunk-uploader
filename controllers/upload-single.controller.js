@@ -43,7 +43,7 @@ const uploadSingle = (req, res) => {
                 start_chunk : start,
                 end_chunk : end,
                 success: true,
-                file_url : `http://localhost:3000/${filename}`,
+                file_url : `https://chunk-uploader.onrender.com/${filename}`,
                 message: "File Uploaded Successfully"
             });
         });
